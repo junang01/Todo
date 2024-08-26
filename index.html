@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <link href="style.css" rel="stylesheet" />
+    <script src="./index.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+    <title>ToDo</title>
+  </head>
+  <body>
+    <h1 id="location-name-tag">ToDO</h1>
+    <div class="todo-container">
+      <input type="text" id="todo-input" onkeydown="keyCodeCheck()" />
+      <!-- onkeydown 키보드로 입력할 때마다 onkeydown에 담겨진 코드가 실행된다!  -->
+      <ul id="todo-list"></ul>
+    </div>
+    <div class="delete-btn-wrapper">
+      <button onclick="deleteAll()">전체 삭제</button>
+    </div>
+    <navigation>
+      <a href="./daycounter.html" id="move-counter">D-day로 이동</a>
+    </navigation>
+  </body>
+</html>

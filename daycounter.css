@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("./images/Clear.jpg");
+  background-size: cover;
+  min-height: 100vh;
+}
+
+#title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+#start-button {
+  font-size: 1.3rem;
+  margin-top: 0.5rem;
+  margin: 10px;
+}
+
+#reset-button {
+  font-size: 1.3rem;
+  margin-top: 0.5rem;
+  margin: 10px;
+  cursor: pointer;
+}
+
+#d-day-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 1.6rem;
+}
+
+.d-day-child-container {
+  text-align: center;
+  margin-right: 1rem;
+}
+
+.d-day-child-container span {
+  font-size: 1.3rem;
+}
+
+#target-selector {
+  margin: 20px 0px;
+}
+
+.d-day-title {
+  margin-top: 15px;
+}
+.d-day-title input {
+  width: 200px;
+  height: 30px;
+}
+
+navigation {
+  margin-top: 20px;
+}
+
+navigation a {
+  color: black;
+  font-weight: 700;
+}
+
+.hover {
+  color: red;
+}

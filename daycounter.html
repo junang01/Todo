@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>Document</title>
+    <link href="./daycounter.css" rel="stylesheet" />
+    <script src="./daycounter.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+    <!--html은 순차적으로 내려오면서 코드를 실행하는데 javaScript가 위에 있기 떄문에 먼저 실행한다 하지만 먼저 실행하면 전역 변수로 데이터 참조를 한 코드에 오류가 발생한다 그래서 Script 코드를 <body>태그 하단에 위치시키거나 defer를 붙여주면 해결된다.! -->
+  </head>
+  <body>
+    <h1 id="title">D-Day</h1>
+    <div id="d-day-container">
+      <!-- 같은 형식을 여러개 작성해야 할 때 태그*개수 or 태그*개수> 자식태그*개수 -->
+      <div class="d-day-child-container">
+        <span id="days">0</span>
+        <span>일</span>
+      </div>
+      <div class="d-day-child-container">
+        <span id="hours">0</span>
+        <span>시간</span>
+      </div>
+      <div class="d-day-child-container">
+        <span id="min">0</span>
+        <span>분</span>
+      </div>
+      <div class="d-day-child-container">
+        <span id="sec">0</span>
+        <span>초</span>
+      </div>
+    </div>
+    <div id="d-day-message"></div>
+    <div class="d-day-title">
+      <input
+        type="text"
+        placeholder="일정을 입력해주세요"
+        id="d-day-input"
+        oninput="startButtonOn()"
+      />
+    </div>
+    <div id="target-selector">
+      <input
+        id="target-year-input"
+        class="target-input"
+        maxlength="4"
+        size="5"
+        oninput="focusyear()"
+      />-
+      <input
+        id="target-month-input"
+        class="target-input"
+        size="5"
+        maxlength="3"
+        oninput="focusmonth()"
+      />-
+      <input
+        id="target-date-input"
+        class="target-input"
+        size="5"
+        maxlength="3"
+      />
+    </div>
+    <button onclick="starter()" id="start-button" disabled="true">
+      카운트다운 시작
+    </button>
+    <button onclick="resetTimer()" id="reset-button">타이머 초기화</button>
+
+    <navigation>
+      <a href="./index.html" id="move-todo">ToDo 페이지로 이동</a>
+    </navigation>
+  </body>
+</html>
